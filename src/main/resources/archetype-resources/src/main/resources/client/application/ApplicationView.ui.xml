@@ -1,0 +1,13 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:m="urn:import:gwt.material.design.client.ui">
+
+    <ui:with field="res" type="${package}.client.resources.AppResources"/>
+
+    <m:MaterialPanel textAlign="CENTER">
+
+        <m:MaterialIcon marginTop="120" textColor="blue darken-1" iconType="POLYMER" iconSize="LARGE"/>
+        <m:MaterialLabel text="Hello MD World" textColor="blue" fontSize="2em"/>
+        <m:MaterialLabel text="Start building now your gwt-material apps." textColor="blue" fontSize="0.8em"/>
+    </m:MaterialPanel>
+</ui:UiBinder>
