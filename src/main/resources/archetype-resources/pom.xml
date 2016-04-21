@@ -78,7 +78,7 @@
                     <logLevel>INFO</logLevel>
 
                     <runTarget>index.html</runTarget>
-                    <module>${package}.gwtmaterialdesign.GwtMaterialBasic</module>
+                    <module>${package}.GwtMaterialBasic</module>
                 </configuration>
                 <executions>
                     <execution>
