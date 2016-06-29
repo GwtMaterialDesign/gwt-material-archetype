@@ -4,11 +4,24 @@
     <parent>
         <artifactId>gwt-material-parent</artifactId>
         <groupId>com.github.gwtmaterialdesign</groupId>
-        <version>1.5.1</version>
+        <version>1.5.2</version>
     </parent>
 
     <groupId>com.github.gwtmaterialdesign</groupId>
     <artifactId>gwt-material-archetype</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
     <packaging>jar</packaging>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>Sonatype Nexus snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Sonatype Nexus release repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
