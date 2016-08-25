@@ -14,7 +14,7 @@
             <defaultValue>${groupId}.${artifactId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>1.5.2</defaultValue>
+            <defaultValue>1.6.0</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
