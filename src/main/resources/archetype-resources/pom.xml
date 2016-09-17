@@ -14,17 +14,18 @@
         <app.id>${artifactId}</app.id>
         <app.version>1</app.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gwt.version>2.7.0</gwt.version>
-        <gwtp.version>1.4</gwtp.version>
+        <gwt.version>2.8.0-rc2</gwt.version>
+        <gwtp.version>1.5.1</gwtp.version>
         <gin.version>2.1.2</gin.version>
         <gwt-material.version>${gwt-material-version}</gwt-material.version>
+        <gwt-material-table.version>${gwt-material-table-version}</gwt-material-table.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- maven -->
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
 
-        <target.jdk>1.7</target.jdk>
+        <target.jdk>1.8</target.jdk>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
@@ -96,8 +97,28 @@
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
             <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JDT -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -124,6 +145,11 @@
             <groupId>com.github.gwtmaterialdesign</groupId>
             <artifactId>gwt-material-addins</artifactId>
             <version>${gwt-material.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.gwtmaterialdesign</groupId>
+            <artifactId>gwt-material-table</artifactId>
+            <version>${gwt-material-table.version}</version>
         </dependency>
 
         <!-- DI -->

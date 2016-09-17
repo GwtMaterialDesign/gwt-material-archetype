@@ -7,7 +7,7 @@
     <m:MaterialPanel textAlign="CENTER">
 
         <m:MaterialIcon marginTop="120" textColor="blue darken-1" iconType="POLYMER" iconSize="LARGE"/>
-        <m:MaterialLabel text="Hello MD World" textColor="blue" fontSize="2em"/>
+        <m:MaterialLabel text="Hello MD World 2.0" textColor="blue" fontSize="2em"/>
         <m:MaterialLabel text="Start building now your gwt-material apps." textColor="blue" fontSize="0.8em"/>
     </m:MaterialPanel>
 </ui:UiBinder>
