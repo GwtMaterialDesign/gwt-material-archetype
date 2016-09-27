@@ -14,3 +14,9 @@ Archetype for a web application that uses GWT Material Design
 4. Follow the prompts
 
 That's it!
+
+# Test/Run
+<code>mvn clean install</code>
+<code>mvn gwt:run</code>
+
+This should open the `GWT Development Mode` window from which you can select `Launch Default Browser` to open the sample application in a browser.
