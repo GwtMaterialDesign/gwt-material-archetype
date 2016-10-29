@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
         "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to='GwtMaterialBasic'>
@@ -14,10 +13,9 @@
     <source path='shared'/>
 
     <!--GWT Material-->
-    <inherits name="gwt.material.design.GwtMaterialWithJQuery"/>
-    <inherits name="gwt.material.design.themes.ThemeBlue"/>
-    <inherits name="gwt.material.design.addins.GwtMaterialAddinsDebug"/>
-    <inherits name="gwt.material.design.GwtMaterialTableDebug"/>
+    <inherits name="gwt.material.design.GwtMaterialBasicWithJQueryDebug"/>
+    <inherits name="gwt.material.design.themes.GwtMaterialThemeBlue"/>
+    <inherits name="gwt.material.design.addins.GwtMaterialAddins"/>
 
     <set-configuration-property name="CssResource.enableGss" value="true"/>
 </module>

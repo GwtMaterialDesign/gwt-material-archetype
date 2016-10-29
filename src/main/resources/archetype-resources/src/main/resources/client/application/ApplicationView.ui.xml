@@ -4,28 +4,10 @@
 
     <ui:with field="res" type="${package}.client.resources.AppResources"/>
 
-    <m:MaterialPanel>
-        <m:MaterialHeader>
-            <m:MaterialNavBar activates="sidenav">
-                <m:MaterialNavBrand paddingLeft="60" text="App" />
-                <m:MaterialNavSection float="RIGHT">
-                    <m:MaterialLink text="Link 1"/>
-                    <m:MaterialLink iconType="POLYMER" />
-                </m:MaterialNavSection>
-            </m:MaterialNavBar>
-            <m:MaterialSideNav m:id="sidenav" type="PUSH" width="280" alwaysShowActivator="true" showOnAttach="true">
-                <m:MaterialLink text="Link 1" iconType="POLYMER"/>
-                <m:MaterialLink text="Link 2" iconType="POLYMER"/>
-                <m:MaterialLink text="Link 3" iconType="POLYMER"/>
-            </m:MaterialSideNav>
-        </m:MaterialHeader>
+    <m:MaterialPanel textAlign="CENTER">
 
-        <m:MaterialContainer>
-            <m:MaterialPanel textAlign="CENTER">
-                <m:MaterialIcon marginTop="120" textColor="BLUE_DARKEN_1" iconType="POLYMER" iconSize="LARGE"/>
-                <m:MaterialLabel text="GMD 2.0" textColor="BLUE" fontSize="2em"/>
-                <m:MaterialLabel text="Start building now your gwt-material apps." textColor="BLUE" fontSize="0.8em"/>
-            </m:MaterialPanel>
-        </m:MaterialContainer>
+        <m:MaterialIcon marginTop="120" textColor="blue darken-1" iconType="POLYMER" iconSize="LARGE"/>
+        <m:MaterialLabel text="Hello MD World" textColor="blue" fontSize="2em"/>
+        <m:MaterialLabel text="Start building now your gwt-material apps." textColor="blue" fontSize="0.8em"/>
     </m:MaterialPanel>
 </ui:UiBinder>

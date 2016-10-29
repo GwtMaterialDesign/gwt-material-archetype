@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <archetype-descriptor
         xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
         name="SampleMVC"
@@ -15,7 +14,7 @@
             <defaultValue>${groupId}.${artifactId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>2.0-rc1</defaultValue>
+            <defaultValue>1.6.0</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
