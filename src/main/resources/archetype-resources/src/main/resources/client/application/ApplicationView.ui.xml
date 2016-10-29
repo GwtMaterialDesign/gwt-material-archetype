@@ -1,13 +1,51 @@
+<!--
+  #%L
+  GwtMaterial
+  %%
+  Copyright (C) 2015 - 2016 GwtMaterialDesign
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
         xmlns:g='urn:import:com.google.gwt.user.client.ui'
         xmlns:m="urn:import:gwt.material.design.client.ui">
 
     <ui:with field="res" type="${package}.client.resources.AppResources"/>
 
-    <m:MaterialPanel textAlign="CENTER">
+    <m:MaterialPanel>
+        <m:MaterialHeader>
+            <m:MaterialNavBar activates="sidenav">
+                <m:MaterialNavBrand paddingLeft="60" text="App" />
+                <m:MaterialNavSection float="RIGHT">
+                    <m:MaterialLink text="Link 1"/>
+                    <m:MaterialLink iconType="POLYMER" />
+                </m:MaterialNavSection>
+            </m:MaterialNavBar>
+            <m:MaterialSideNav m:id="sidenav" type="PUSH" width="280" alwaysShowActivator="true" showOnAttach="true">
+                <m:MaterialLink text="Link 1" iconType="POLYMER"/>
+                <m:MaterialLink text="Link 2" iconType="POLYMER"/>
+                <m:MaterialLink text="Link 3" iconType="POLYMER"/>
+            </m:MaterialSideNav>
+        </m:MaterialHeader>
 
-        <m:MaterialIcon marginTop="120" textColor="blue darken-1" iconType="POLYMER" iconSize="LARGE"/>
-        <m:MaterialLabel text="Hello MD World 2.0" textColor="blue" fontSize="2em"/>
-        <m:MaterialLabel text="Start building now your gwt-material apps." textColor="blue" fontSize="0.8em"/>
+        <m:MaterialContainer>
+            <m:MaterialPanel textAlign="CENTER">
+                <m:MaterialIcon marginTop="120" textColor="BLUE_DARKEN_1" iconType="POLYMER" iconSize="LARGE"/>
+                <m:MaterialLabel text="GMD 2.0" textColor="BLUE" fontSize="2em"/>
+                <m:MaterialLabel text="Start building now your gwt-material apps." textColor="BLUE" fontSize="0.8em"/>
+            </m:MaterialPanel>
+        </m:MaterialContainer>
+
     </m:MaterialPanel>
 </ui:UiBinder>
