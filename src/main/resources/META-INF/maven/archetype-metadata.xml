@@ -14,10 +14,10 @@
             <defaultValue>${groupId}.${artifactId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>2.0-rc2</defaultValue>
+            <defaultValue>2.0-rc3</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-table-version">
-            <defaultValue>1.0-rc2</defaultValue>
+            <defaultValue>1.0-rc3</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
