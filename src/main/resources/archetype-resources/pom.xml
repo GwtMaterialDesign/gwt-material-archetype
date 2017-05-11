@@ -18,7 +18,6 @@
         <gwtp.version>1.5.3</gwtp.version>
         <gin.version>2.1.2</gin.version>
         <gwt-material.version>${gwt-material-version}</gwt-material.version>
-        <gwt-material-table.version>${gwt-material-table-version}</gwt-material-table.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- maven -->
@@ -149,7 +148,7 @@
         <dependency>
             <groupId>com.github.gwtmaterialdesign</groupId>
             <artifactId>gwt-material-table</artifactId>
-            <version>${gwt-material-table.version}</version>
+            <version>${gwt-material.version}</version>
         </dependency>
 
         <!-- DI -->

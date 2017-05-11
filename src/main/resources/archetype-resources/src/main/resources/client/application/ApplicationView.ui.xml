@@ -13,12 +13,13 @@
                     <m:MaterialLink iconType="POLYMER" />
                 </m:MaterialNavSection>
             </m:MaterialNavBar>
-            <m:MaterialSideNav m:id="sidenav" type="PUSH" width="280" alwaysShowActivator="true" showOnAttach="true">
-                <m:MaterialLink text="Link 1" iconType="POLYMER"/>
-                <m:MaterialLink text="Link 2" iconType="POLYMER"/>
-                <m:MaterialLink text="Link 3" iconType="POLYMER"/>
-            </m:MaterialSideNav>
         </m:MaterialHeader>
+
+        <m:MaterialSideNavPush m:id="sidenav" width="280">
+            <m:MaterialLink text="Link 1" iconType="POLYMER"/>
+            <m:MaterialLink text="Link 2" iconType="POLYMER"/>
+            <m:MaterialLink text="Link 3" iconType="POLYMER"/>
+        </m:MaterialSideNavPush>
 
         <m:MaterialContainer>
             <m:MaterialPanel textAlign="CENTER">
