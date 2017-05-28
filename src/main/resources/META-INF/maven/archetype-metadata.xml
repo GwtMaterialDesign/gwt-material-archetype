@@ -7,6 +7,12 @@
     <requiredProperties>
         <requiredProperty key="groupId"/>
         <requiredProperty key="artifactId"/>
+        <requiredProperty key="projectName">
+            <defaultValue>GwtMaterialBasic</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="moduleName">
+            <defaultValue>${projectName}</defaultValue>
+        </requiredProperty>
         <requiredProperty key="version">
             <defaultValue>1.0-SNAPSHOT</defaultValue>
         </requiredProperty>
@@ -30,7 +36,7 @@
                 <include>**/*.java</include>
             </includes>
         </fileSet>
-        <fileSet filtered="false" packaged="false" encoding="UTF-8">
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
             <directory>src/main/webapp</directory>
             <includes>
                 <include>**/*.*</include>
