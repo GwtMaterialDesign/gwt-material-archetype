@@ -14,7 +14,7 @@
         <app.id>${artifactId}</app.id>
         <app.version>1</app.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gwt.version>2.8.0</gwt.version>
+        <gwt.version>2.8.1</gwt.version>
         <gwtp.version>1.5.3</gwtp.version>
         <gin.version>2.1.2</gin.version>
         <gwt-material.version>${gwt-material-version}</gwt-material.version>
