@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
         "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
-<module rename-to='GwtMaterialBasic'>
+<module rename-to='${moduleName}'>
     <inherits name='com.google.gwt.user.User'/>
     <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
 
@@ -19,4 +19,9 @@
     <inherits name="gwt.material.design.GwtMaterialTableDebug"/>
 
     <set-configuration-property name="CssResource.enableGss" value="true"/>
+
+    <!-- Comment it if you want permutations per property.
+         It increases compilation time -->
+    <collapse-all-properties value="true" />
+
 </module>
