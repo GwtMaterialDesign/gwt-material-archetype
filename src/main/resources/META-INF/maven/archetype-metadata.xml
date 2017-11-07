@@ -8,27 +8,36 @@
     <requiredProperties>
         <requiredProperty key="groupId"/>
         <requiredProperty key="artifactId"/>
-        <requiredProperty key="projectName">
-            <defaultValue>GwtMaterialBasic</defaultValue>
-        </requiredProperty>
         <requiredProperty key="moduleName">
-            <defaultValue>${projectName}</defaultValue>
+            <defaultValue>GwtMaterialApp</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
             <defaultValue>1.0-SNAPSHOT</defaultValue>
         </requiredProperty>
         <requiredProperty key="package">
-            <defaultValue>${groupId}.${artifactId}</defaultValue>
+            <defaultValue>${groupId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>2.0</defaultValue>
+            <defaultValue>2.1-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="pwa-enabled">
+            <defaultValue>y</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>package.json</include>
+                <include>service-worker-builder.js</include>
+                <include>service-worker-template.js</include>
+            </includes>
+        </fileSet>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
             <directory>src/main/java</directory>
             <includes>
                 <include>**/*.java</include>
+                <include>**/*.xml</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">

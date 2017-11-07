@@ -1,0 +1,25 @@
+{
+  "name": "'" + ${moduleName} + "'",
+  "short_name": "'" + ${moduleName} + "'",
+  "icons": [
+    {
+      "src": "image/launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "image/launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "image/launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#2196f3",
+  "theme_color": "#1565c0"
+}

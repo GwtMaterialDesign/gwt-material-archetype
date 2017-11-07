@@ -7,7 +7,7 @@
     <version>${version}</version>
     <packaging>war</packaging>
 
-    <name>Basic Template for using GWT Material Design</name>
+    <name>${moduleName}</name>
     <url>https://github.com/GwtMaterialDesign</url>
 
     <properties>
@@ -22,8 +22,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <appModuleName>${package}.${projectName}</appModuleName>
-        <moduleShortName>${moduleName}</moduleShortName>
+        <appModuleName>${package}.${moduleName}</appModuleName>
+        <appModuleShortName>${moduleName}</appModuleShortName>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
@@ -67,7 +67,7 @@
                 </executions>
                 <configuration>
                     <moduleName>${appModuleName}</moduleName>
-                    <moduleShortName>${appModuleShorName}</moduleShortName>
+                    <moduleShortName>${appModuleShortName}</moduleShortName>
                     <failOnError>true</failOnError>
                     <sourceLevel>1.8</sourceLevel>
                     <compilerArgs>
@@ -105,27 +105,71 @@
                 </executions>
             </plugin>
 
+            <!-- Service worker generator -->
+            #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <nodeVersion>v9.0.0</nodeVersion>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>npm generate</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <arguments>run-script generate ${project.build.finalName}</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            #end
         </plugins>
     </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt</artifactId>
+                <version>${gwt.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${gwt.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-dev</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
 
