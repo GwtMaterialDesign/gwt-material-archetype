@@ -1,6 +1,6 @@
 {
-  "name": "'" + ${moduleName} + "'",
-  "short_name": "'" + ${moduleName} + "'",
+  "name": "${moduleName}",
+  "short_name": "${moduleName}",
   "icons": [
     {
       "src": "image/launcher-icon-1x.png",

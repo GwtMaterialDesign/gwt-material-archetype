@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/roboto.eot'); /* IE9 Compat Modes */
+    src: url('/font/roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/font/roboto.woff') format('woff'), /* Modern Browsers */ url('/font/roboto.ttf') format('truetype'), /* Safari, Android, iOS */ url('/font/roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+#splashscreen {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: #2196f3 !important;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;nnec
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    z-index: 9999;
+}
+
+#splashscreen div {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#splashscreen img {
+    width: 150px;
+}
+
+#splashscreen .progress {
+    margin: 0px;
+    position: absolute;
+    bottom: 2px;
+    height: 6px;
+}
+
+#splashscreen span.title {
+    font-size: 2em;
+    display: block;
+}
+
+#splashscreen span.descripton {
+    font-weight: 200;
+}
+
