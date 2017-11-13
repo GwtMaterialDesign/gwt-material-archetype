@@ -21,3 +21,6 @@ That's it!
 <code>mvn gwt:run</code>
 
 This should open the `GWT Development Mode` window from which you can select `Launch Default Browser` to open the sample application in a browser.
+
+# Service Worker Automation
+[Reference for the wiki](https://github.com/GwtMaterialDesign/gwt-material-archetype/wiki/ServiceWorker-Automation)
