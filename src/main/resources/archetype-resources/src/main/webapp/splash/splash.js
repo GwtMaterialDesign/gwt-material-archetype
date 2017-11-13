@@ -8,11 +8,11 @@ image.src = "/launcher-icons/launcher4x.png";
 
 var title = document.createElement("span");
 title.className = "title";
-title.innerHTML = "${moduleName}";
+title.innerHTML = "${projectName}";
 
 var description = document.createElement("span");
 description.className = "description";
-description.innerHTML = "${moduleName}";
+description.innerHTML = "${projectName}";
 
 var progress = document.createElement("div");
 progress.className = "progress";
@@ -29,4 +29,4 @@ splashContent.append(progress);
 splashcontainer.append(splashContent);
 document.body.appendChild(splashcontainer);
 
-document.write('<link rel="stylesheet" type="text/css" href="offline/splash.css">');
+document.write('<link rel="stylesheet" type="text/css" href="splash/splash.css">');

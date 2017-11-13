@@ -4,7 +4,7 @@ const arguments = args.slice(2);
 const buildFolderName = arguments[0];
 const gwtModuleName = arguments[1];
 
-if (typeof buildFolderName === 'undefined' || !buildFolderName){
+if (typeof buildFolderName === 'undefined' || !buildFolderName) {
     console.log("Please provide the name of the build folder.");
     return;
 }
@@ -23,14 +23,14 @@ function browseAllFilesInDirectory(folder) {
 
     fs.readdirSync(folder).forEach(fileName => {
         const resource = folder + "/" + fileName;
-    if (exceptions.indexOf(fileName) < 0) {
-        if (fileName.match(filesRegExp)) {
-            filesToCache.push(resource.replace(rootFolder+"/", ""));
-        } else if (fs.lstatSync(resource).isDirectory()) {
-            browseAllFilesInDirectory(resource);
+        if (exceptions.indexOf(fileName) < 0) {
+            if (fileName.match(filesRegExp)) {
+                filesToCache.push(resource.replace(rootFolder + "/", ""));
+            } else if (fs.lstatSync(resource).isDirectory()) {
+                browseAllFilesInDirectory(resource);
+            }
         }
-    }
-});
+    });
 }
 
 var swData = {
@@ -38,14 +38,14 @@ var swData = {
     filesToCache: filesToCache,
 };
 
-fs.readFile("service-worker-template.js", "utf8", (error, data) => {
+fs.readFile("bin/sw-template.js", "utf8", (error, data) => {
     if (error) {
         console.log("Unable to read template file");
     }
     var template = Handlebars.compile(data);
-var serviceWorkerJs = template(swData);
+    var serviceWorkerJs = template(swData);
 
-fs.writeFile(rootFolder+"/service-worker.js", serviceWorkerJs, (error) => {
-    console.log("Successfully generated service worker service-worker.js in " + rootFolder);
-});
+    fs.writeFile(rootFolder + "/service-worker.js", serviceWorkerJs, (error) => {
+        console.log("Successfully generated service worker service-worker.js in " + rootFolder);
+    });
 });

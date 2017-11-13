@@ -47,14 +47,17 @@
         </requiredProperty>
     </requiredProperties>
     <fileSets>
+        <!-- Root Directory -->
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
             <directory></directory>
             <includes>
                 <include>package.json</include>
-                <include>service-worker-builder.js</include>
-                <include>service-worker-template.js</include>
+                <include>bin/sw-builder.js</include>
+                <include>bin/sw-template.js</include>
             </includes>
         </fileSet>
+
+        <!-- Java Sources -->
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
             <directory>src/main/java</directory>
             <includes>
@@ -62,18 +65,42 @@
                 <include>**/*.xml</include>
             </includes>
         </fileSet>
+
+        <!-- Test Sources -->
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
             <directory>src/test/java</directory>
             <includes>
                 <include>**/*.java</include>
             </includes>
         </fileSet>
+
+        <!-- Webapp -->
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
             <directory>src/main/webapp</directory>
             <includes>
                 <include>**/*.*</include>
             </includes>
+            <excludes>
+                <exclude>**/*.png</exclude>
+                <exclude>**/*.eot</exclude>
+                <exclude>**/*.ttf</exclude>
+                <exclude>**/*.woff</exclude>
+                <exclude>**/*.woff2</exclude>
+            </excludes>
         </fileSet>
+        
+        <fileSet filtered="false" packaged="false">
+            <directory>src/main/webapp</directory>
+            <includes>
+                <include>**/*.png</include>
+                <include>**/*.eot</include>
+                <include>**/*.ttf</include>
+                <include>**/*.woff</include>
+                <include>**/*.woff2</include>
+            </includes>
+        </fileSet>
+
+        <!-- Resources -->
         <fileSet filtered="true"  packaged="true" encoding="UTF-8">
             <directory>src/main/resources</directory>
             <includes>

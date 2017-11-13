@@ -19,34 +19,71 @@
  */
 package ${package}.client.application;
 
-import javax.inject.Inject;
+import ${package}.client.pwa.AppServiceWorkerManager;
 import com.google.gwt.dom.client.Document;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
+import gwt.material.design.client.constants.Color;
 import gwt.material.design.client.pwa.PwaManager;
+import gwt.material.design.client.ui.*;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
     interface Binder extends UiBinder<Widget, ApplicationView> {
     }
+
+    @UiField
+    MaterialContainer container;
+
+    @UiField
+    MaterialButton btnAdd;
+
+     #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
+
+    @UiField
+    MaterialCard offlineCard;
+
+    #end
+
+    @UiField
+    MaterialPanel onlinePanel;
+
+    @UiField
+    MaterialNavBar navBar;
 
     @Inject
     ApplicationView(
             Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
 
-        #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
+         #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
+
+        AppServiceWorkerManager serviceWorkerManager = new AppServiceWorkerManager("service-worker.js");
+        serviceWorkerManager.addConnectionStatusUpdateHandler(event -> {
+            btnAdd.setEnabled(event.isOnline());
+            onlinePanel.setVisible(event.isOnline());
+            offlineCard.setVisible(!event.isOnline());
+
+            if (event.isOnline()) {
+                navBar.setBackgroundColor(Color.INDIGO);
+            } else {
+                navBar.setBackgroundColor(Color.GREY);
+            }
+        });
 
         PwaManager.getInstance()
-                .setServiceWorker("service-worker.js")
+                .setServiceWorker(serviceWorkerManager)
                 .setWebManifest("manifest.json")
-                .setThemeColor("#2196f3").load();
+                .setThemeColor("#2196f3")
+                .load();
 
-        #end
-
+         #end
     }
 
-    #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
 
     @Override
     protected void onAttach() {
@@ -55,6 +92,8 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
         Document.get().getElementById("splashscreen").removeFromParent();
     }
 
-    #end
-
+    @UiHandler("btnAdd")
+    void onAdd(ClickEvent e) {
+        MaterialToast.fireToast("I love GaMD");
+    }
 }
