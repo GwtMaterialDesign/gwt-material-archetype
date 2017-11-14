@@ -18,7 +18,7 @@ var filesToCache = [];
 browseAllFilesInDirectory(rootFolder);
 
 function browseAllFilesInDirectory(folder) {
-    const filesRegExp = /\.(html|css|js|gif|png|jpeg)$/i;
+    const filesRegExp = /\.(html|css|js|gif|png|jpeg|eot|ttf|woff|woff2)$/i;
     const exceptions = ["WEB-INF", "META-INF"];
 
     fs.readdirSync(folder).forEach(fileName => {
