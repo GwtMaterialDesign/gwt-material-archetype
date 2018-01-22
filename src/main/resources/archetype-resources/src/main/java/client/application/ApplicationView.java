@@ -62,21 +62,8 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
          #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
 
-        AppServiceWorkerManager serviceWorkerManager = new AppServiceWorkerManager("service-worker.js");
-        serviceWorkerManager.addConnectionStatusUpdateHandler(event -> {
-            btnAdd.setEnabled(event.isOnline());
-            onlinePanel.setVisible(event.isOnline());
-            offlineCard.setVisible(!event.isOnline());
-
-            if (event.isOnline()) {
-                navBar.setBackgroundColor(Color.INDIGO);
-            } else {
-                navBar.setBackgroundColor(Color.GREY);
-            }
-        });
-
         PwaManager.getInstance()
-                .setServiceWorker(serviceWorkerManager)
+                .setServiceWorker(new AppServiceWorkerManager("service-worker.js"))
                 .setWebManifest("manifest.json")
                 .setThemeColor("#2196f3")
                 .load();
