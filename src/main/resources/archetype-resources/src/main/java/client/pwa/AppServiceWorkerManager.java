@@ -17,20 +17,26 @@
  * limitations under the License.
  * #L%
  */
-package ${package}.client.application.home;
+package ${package}.client.pwa;
 
-import javax.inject.Inject;
+import gwt.material.design.client.pwa.serviceworker.DefaultServiceWorkerManager;
+import gwt.material.design.client.ui.MaterialToast;
 
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.mvp.client.ViewImpl;
+public class AppServiceWorkerManager extends DefaultServiceWorkerManager {
 
-public class HomeView extends ViewImpl implements HomePresenter.MyView {
-    interface Binder extends UiBinder<Widget, HomeView> {
+    public AppServiceWorkerManager(String resource) {
+        super(resource);
     }
 
-    @Inject
-    HomeView(Binder uiBinder) {
-        initWidget(uiBinder.createAndBindUi(this));
+    @Override
+    protected void onOffline() {
+        super.onOffline();
+        MaterialToast.fireToast("You are now offline");
+    }
+
+    @Override
+    protected void onOnline() {
+        super.onOnline();
+        MaterialToast.fireToast("You are now Online");
     }
 }

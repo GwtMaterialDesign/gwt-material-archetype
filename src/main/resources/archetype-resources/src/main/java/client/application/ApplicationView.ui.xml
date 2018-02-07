@@ -1,0 +1,81 @@
+<!--
+  #%L
+  GwtMaterial
+  %%
+  Copyright (C) 2015 - 2017 GwtMaterialDesign
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:m="urn:import:gwt.material.design.client.ui">
+
+    <ui:with field="res" type="${package}.client.resources.AppResources"/>
+
+    <m:MaterialPanel>
+        <m:MaterialHeader>
+            <m:MaterialNavBar ui:field="navBar" activates="sidenav" backgroundColor="INDIGO">
+                <m:MaterialNavBrand fontSize="1.2em" text="${projectName}" />
+                <m:MaterialNavSection float="RIGHT">
+                    <m:MaterialLink text="Link 1"/>
+                    <m:MaterialLink iconType="POLYMER" />
+                </m:MaterialNavSection>
+            </m:MaterialNavBar>
+        </m:MaterialHeader>
+
+        <m:MaterialSideNavPush m:id="sidenav" width="280">
+            <m:MaterialLink text="Link 1" iconType="POLYMER"/>
+            <m:MaterialLink text="Link 2" iconType="POLYMER"/>
+            <m:MaterialLink text="Link 3" iconType="POLYMER"/>
+        </m:MaterialSideNavPush>
+
+        <m:MaterialContainer ui:field="container">
+            <m:MaterialRow paddingTop="120">
+                <m:MaterialColumn grid="s12 m4 l4" offset="m4 l4">
+
+                    #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
+
+                    <m:MaterialCard ui:field="offlineCard" visible="false">
+                        <m:MaterialCardContent>
+                            <m:MaterialRow>
+                                <m:MaterialColumn grid="s4">
+                                    <m:MaterialIcon iconType="CLOUD_OFF" iconColor="BLUE_LIGHTEN_3" iconSize="MEDIUM"/>
+                                </m:MaterialColumn>
+                                <m:MaterialColumn grid="s8">
+                                    <m:MaterialLabel text="No Internet" fontSize="1.2em" fontWeight="BOLD"/>
+                                    <m:MaterialLabel text="Your network is unavailable. Check your data on Wi-Fi connection." textColor="GREY" fontSize="0.8em"/>
+                                </m:MaterialColumn>
+                            </m:MaterialRow>
+                        </m:MaterialCardContent>
+                        <m:MaterialCardAction padding="0">
+                            <m:MaterialButton text="Retry" textColor="GREY" iconType="REFRESH" type="FLAT" waves="DEFAULT"/>
+                        </m:MaterialCardAction>
+                    </m:MaterialCard>
+
+                    #end
+
+                    <m:MaterialPanel ui:field="onlinePanel" textAlign="CENTER">
+                        <m:MaterialIcon marginTop="120" textColor="BLUE_DARKEN_1" iconType="POLYMER" iconSize="LARGE"/>
+                        <m:MaterialLabel text="${projectName}" textColor="BLUE" fontSize="2em"/>
+                        <m:MaterialLabel text="${description}" textColor="BLUE" fontSize="0.8em"/>
+                    </m:MaterialPanel>
+                </m:MaterialColumn>
+            </m:MaterialRow>
+        </m:MaterialContainer>
+
+        <m:MaterialFAB>
+            <m:MaterialButton ui:field="btnAdd" iconType="ADD" type="FLOATING" size="LARGE" backgroundColor="PINK"/>
+        </m:MaterialFAB>
+    </m:MaterialPanel>
+</ui:UiBinder>
