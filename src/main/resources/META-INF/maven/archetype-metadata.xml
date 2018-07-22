@@ -40,23 +40,10 @@
             <defaultValue>${groupId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>2.1-SNAPSHOT</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="pwa-enabled">
-            <defaultValue>y</defaultValue>
+            <defaultValue>2.1</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
-        <!-- Root Directory -->
-        <fileSet filtered="true" packaged="false" encoding="UTF-8">
-            <directory></directory>
-            <includes>
-                <include>package.json</include>
-                <include>bin/sw-builder.js</include>
-                <include>bin/sw-template.js</include>
-            </includes>
-        </fileSet>
-
         <!-- Java Sources -->
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
             <directory>src/main/java</directory>

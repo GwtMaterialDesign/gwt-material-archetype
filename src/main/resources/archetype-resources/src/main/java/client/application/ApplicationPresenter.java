@@ -42,8 +42,7 @@ public class ApplicationPresenter
     public static final GwtEvent.Type<RevealContentHandler<?>> SLOT_MAIN = new GwtEvent.Type<>();
 
     @Inject
-    ApplicationPresenter(
-            EventBus eventBus,
+    ApplicationPresenter(EventBus eventBus,
             MyView view,
             MyProxy proxy) {
         super(eventBus, view, proxy, RevealType.Root);

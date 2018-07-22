@@ -19,7 +19,6 @@
  */
 package ${package}.client.application;
 
-import ${package}.client.pwa.AppServiceWorkerManager;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -28,8 +27,6 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
-import gwt.material.design.client.constants.Color;
-import gwt.material.design.client.pwa.PwaManager;
 import gwt.material.design.client.ui.*;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
@@ -42,35 +39,10 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     @UiField
     MaterialButton btnAdd;
 
-     #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
-
-    @UiField
-    MaterialCard offlineCard;
-
-    #end
-
-    @UiField
-    MaterialPanel onlinePanel;
-
-    @UiField
-    MaterialNavBar navBar;
-
     @Inject
-    ApplicationView(
-            Binder uiBinder) {
+    ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
-
-         #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
-
-        PwaManager.getInstance()
-                .setServiceWorker(new AppServiceWorkerManager("service-worker.js"))
-                .setWebManifest("manifest.json")
-                .setThemeColor("#2196f3")
-                .load();
-
-         #end
     }
-
 
     @Override
     protected void onAttach() {

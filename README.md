@@ -3,9 +3,9 @@ Archetype for a web application that uses GWT Material Design
 
 # Current Version - 2.0
 ### Includes
-- Updated GWT Version to 2.8.1
+- Updated GWT Version to 2.8.2
 - Updated GWTP Version to 1.5.3
-- Updated GMD Version to 2.0
+- Updated GMD Version to 2.1
 
 # Usage:
 1. Download the archetype
@@ -18,7 +18,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.0-rc5
+          -DarchetypeVersion=2.1
 
 4. Follow the prompts. That's it!
 
@@ -26,13 +26,20 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.0-rc5 \
+          -DarchetypeVersion=2.1 \
           -DgroupId=your.company.domain \
           -Dpackage=your.company.domain.myapp \
           -DartifactId=your-project \
           -DprojectName=YourProjectName \
           -DmoduleName=myapp
+          
+6. You can also generate a project from Snapshot using the code below:
 
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign 
+         -DarchetypeArtifactId=gwt-material-archetype 
+         -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
+         -DarchetypeVersion=2.1
+     
 # Test/Run
 
 Executing the next line, it should open the `GWT Development Mode` window from which you can select `Launch Default Browser` to open the sample application in a browser.

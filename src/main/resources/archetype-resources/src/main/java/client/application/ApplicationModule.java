@@ -24,6 +24,7 @@ import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
 public class
 ApplicationModule extends AbstractPresenterModule {
+
     @Override
     protected void configure() {
         install(new HomeModule());

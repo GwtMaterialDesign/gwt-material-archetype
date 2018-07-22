@@ -43,28 +43,6 @@
         <m:MaterialContainer ui:field="container">
             <m:MaterialRow paddingTop="120">
                 <m:MaterialColumn grid="s12 m4 l4" offset="m4 l4">
-
-                    #if( ${pwa-enabled} == "y" || ${pwa-enabled} == "Y")
-
-                    <m:MaterialCard ui:field="offlineCard" visible="false">
-                        <m:MaterialCardContent>
-                            <m:MaterialRow>
-                                <m:MaterialColumn grid="s4">
-                                    <m:MaterialIcon iconType="CLOUD_OFF" iconColor="BLUE_LIGHTEN_3" iconSize="MEDIUM"/>
-                                </m:MaterialColumn>
-                                <m:MaterialColumn grid="s8">
-                                    <m:MaterialLabel text="No Internet" fontSize="1.2em" fontWeight="BOLD"/>
-                                    <m:MaterialLabel text="Your network is unavailable. Check your data on Wi-Fi connection." textColor="GREY" fontSize="0.8em"/>
-                                </m:MaterialColumn>
-                            </m:MaterialRow>
-                        </m:MaterialCardContent>
-                        <m:MaterialCardAction padding="0">
-                            <m:MaterialButton text="Retry" textColor="GREY" iconType="REFRESH" type="FLAT" waves="DEFAULT"/>
-                        </m:MaterialCardAction>
-                    </m:MaterialCard>
-
-                    #end
-
                     <m:MaterialPanel ui:field="onlinePanel" textAlign="CENTER">
                         <m:MaterialIcon marginTop="120" textColor="BLUE_DARKEN_1" iconType="POLYMER" iconSize="LARGE"/>
                         <m:MaterialLabel text="${projectName}" textColor="BLUE" fontSize="2em"/>
