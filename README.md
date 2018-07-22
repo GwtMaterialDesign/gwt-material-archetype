@@ -1,7 +1,7 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.0.1
+# Current Version - 2.1
 ### Includes
 - Updated GWT Version to 2.8.2
 - Updated GWTP Version to 1.5.3
