@@ -21,16 +21,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
+    <groupId>com.gwt</groupId>
+    <artifactId>gwt-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>${moduleName}</name>
+    <name>Test</name>
     <url>https://github.com/GwtMaterialDesign</url>
 
     <properties>
-        <app.id>${artifactId}</app.id>
+        <app.id>gwt-test</app.id>
         <app.version>1</app.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gwt.version>2.8.2</gwt.version>
@@ -41,8 +41,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <appModuleName>${package}.${moduleName}</appModuleName>
-        <appModuleShortName>${moduleName}</appModuleShortName>
+        <appModuleName>com.gwt.Test</appModuleName>
+        <appModuleShortName>Test</appModuleShortName>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
@@ -124,6 +124,9 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Service worker generator -->
+            
         </plugins>
     </build>
 
