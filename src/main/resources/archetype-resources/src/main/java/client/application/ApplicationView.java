@@ -53,6 +53,6 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
     @UiHandler("btnAdd")
     void onAdd(ClickEvent e) {
-        MaterialToast.fireToast("I love GaMD");
+        MaterialToast.fireToast("I love GMD");
     }
 }
