@@ -39,7 +39,7 @@ Archetype for a web application that uses GWT Material Design
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign 
          -DarchetypeArtifactId=gwt-material-archetype 
          -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-         -DarchetypeVersion=2.1
+         -DarchetypeVersion=2.1-SNAPSHOT
      
 # Test/Run
 
