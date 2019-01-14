@@ -17,35 +17,32 @@
  * limitations under the License.
  * #L%
  */
-package ${package}.client.application;
+package ${package}.client.application.profile;
 
-import com.google.gwt.event.shared.GwtEvent;
+import ${package}.client.application.ApplicationPresenter;
+import ${package}.client.place.NameTokens;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
-import com.gwtplatform.mvp.client.annotations.ContentSlot;
+import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
-import com.gwtplatform.mvp.client.proxy.Proxy;
-import com.gwtplatform.mvp.client.presenter.slots.NestedSlot;
-import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
+import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
-public class ApplicationPresenter
-        extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
-
+public class ProfilePresenter extends Presenter<ProfilePresenter.MyView, ProfilePresenter.MyProxy> {
     interface MyView extends View {
     }
 
     @ProxyStandard
-    interface MyProxy extends Proxy<ApplicationPresenter> {
+    @NameToken(NameTokens.PROFILE)
+    interface MyProxy extends ProxyPlace<ProfilePresenter> {
     }
 
-    public static final NestedSlot SLOT_MAIN = new NestedSlot();
-
     @Inject
-    ApplicationPresenter(EventBus eventBus,
+    ProfilePresenter(
+            EventBus eventBus,
             MyView view,
             MyProxy proxy) {
-        super(eventBus, view, proxy, RevealType.Root);
+        super(eventBus, view, proxy, ApplicationPresenter.SLOT_MAIN);
     }
 }

@@ -17,20 +17,14 @@
  * limitations under the License.
  * #L%
  */
-package ${package}.client.application;
+package ${package}.client.application.profile;
 
-import ${package}.client.application.home.HomeModule;
-import ${package}.client.application.profile.ProfileModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
-public class ApplicationModule extends AbstractPresenterModule {
-
+public class ProfileModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new HomeModule());
-        install(new ProfileModule());
-
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+        bindPresenter(ProfilePresenter.class, ProfilePresenter.MyView.class, ProfileView.class,
+                ProfilePresenter.MyProxy.class);
     }
 }

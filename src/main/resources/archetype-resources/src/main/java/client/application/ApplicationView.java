@@ -30,6 +30,7 @@ import com.gwtplatform.mvp.client.ViewImpl;
 import gwt.material.design.client.ui.*;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
+
     interface Binder extends UiBinder<Widget, ApplicationView> {
     }
 
@@ -42,6 +43,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     @Inject
     ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
+        bindSlot(ApplicationPresenter.SLOT_MAIN, container);
     }
 
     @Override

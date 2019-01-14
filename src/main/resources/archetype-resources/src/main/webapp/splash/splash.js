@@ -4,7 +4,7 @@ splashcontainer.id = "splashscreen";
 var splashContent = document.createElement('div');
 
 var image = document.createElement("img");
-image.src = "/launcher-icons/launcher4x.png";
+image.src = "https://gwtmaterialdesign.github.io/gmd-core-demo/launcher-icons/launcher2x.png";
 
 var title = document.createElement("span");
 title.className = "title";
@@ -12,7 +12,7 @@ title.innerHTML = "${projectName}";
 
 var description = document.createElement("span");
 description.className = "description";
-description.innerHTML = "${projectName}";
+description.innerHTML = "Some description";
 
 var progress = document.createElement("div");
 progress.className = "progress";
@@ -28,5 +28,3 @@ splashContent.append(progress);
 
 splashcontainer.append(splashContent);
 document.body.appendChild(splashcontainer);
-
-document.write('<link rel="stylesheet" type="text/css" href="splash/splash.css">');
