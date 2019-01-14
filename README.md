@@ -36,10 +36,7 @@ Archetype for a web application that uses GWT Material Design
           
 6. You can also generate a project from Snapshot using the code below:
 
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign 
-         -DarchetypeArtifactId=gwt-material-archetype 
-         -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-         -DarchetypeVersion=2.2-SNAPSHOT
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/ -DarchetypeVersion=2.2-SNAPSHOT
      
 # Test/Run
 
