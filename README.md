@@ -1,16 +1,16 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.1.1
+# Current Version - 2.2-rc1
 ### Includes
 - Updated GWT Version to 2.8.2
 - Updated GWTP Version to 1.5.3
-- Updated GMD Version to 2.1.1
+- Updated GMD Version to  2.2-rc1
 
 # Usage:
 1. Download the archetype
 2. From the download folder, install the archetype in your local Maven repo by running this command: <code>mvn clean install</code>
-3. Create a new project by running the following command in a folder of your choice: <code>mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.1.1</code>
+3. Create a new project by running the following command in a folder of your choice: <code>mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.2-rc1</code>
 4. Follow the prompts
 
         mvn clean install archetype:update-local-catalog
@@ -19,7 +19,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.1.1
+          -DarchetypeVersion=2.2-rc1
 
 4. Follow the prompts. That's it!
 
@@ -27,7 +27,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.1.1 \
+          -DarchetypeVersion=2.2-rc1 \
           -DgroupId=your.company.domain \
           -Dpackage=your.company.domain.myapp \
           -DartifactId=your-project \
