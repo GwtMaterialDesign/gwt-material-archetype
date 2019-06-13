@@ -18,14 +18,14 @@
   #L%
   -->
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-             xmlns:m='urn:import:gwt.material.design.client.ui'>
+        xmlns:m='urn:import:gwt.material.design.client.ui'>
 
     <m:MaterialPanel>
         <m:MaterialPanel height="100vh" addStyleNames="valign-wrapper" textAlign="CENTER">
             <m:MaterialPanel style="margin: auto">
                 <m:MaterialImage url="https://gwtmaterialdesign.github.io/gmd-core-demo/launcher-icons/launcher1x.png" alt="logo"/>
-                <m:MaterialLabel text="Welcome to gwt-material World" fontSize="2em"/>
-                <m:MaterialLabel text="Version 2.2" />
+                <m:MaterialLabel text="Profile Page" fontSize="2em"/>
+                <m:MaterialLabel text="Lorem Ipsum Dolor emet" />
             </m:MaterialPanel>
         </m:MaterialPanel>
     </m:MaterialPanel>

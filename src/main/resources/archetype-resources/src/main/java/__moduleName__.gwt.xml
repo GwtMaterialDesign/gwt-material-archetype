@@ -24,11 +24,7 @@
         "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
 <module rename-to='${moduleName}'>
     <inherits name='com.google.gwt.user.User'/>
-    <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
-
-    <extend-configuration-property name="gin.ginjector.modules"
-                                   value="${package}.client.gin.ClientModule"/>
-
+    
     <!-- Specify the paths for translatable code                    -->
     <source path='client'/>
     <source path='shared'/>
@@ -38,6 +34,10 @@
     <inherits name="gwt.material.design.addins.GwtMaterialAddins"/>
     <inherits name="gwt.material.design.GwtMaterialTable"/>
     <inherits name="gwt.material.design.themes.ThemeBlue"/>
+    <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
+
+    <extend-configuration-property name="gin.ginjector.modules"
+                                   value="${package}.client.gin.ClientModule"/>
 
     <set-configuration-property name="CssResource.enableGss" value="true"/>
 

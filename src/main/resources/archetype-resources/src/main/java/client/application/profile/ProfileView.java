@@ -17,20 +17,20 @@
  * limitations under the License.
  * #L%
  */
-package ${package}.client.application;
+package ${package}.client.application.profile;
 
-import ${package}.client.application.home.HomeModule;
-import ${package}.client.application.profile.ProfileModule;
-import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Widget;
+import com.gwtplatform.mvp.client.ViewImpl;
 
-public class ApplicationModule extends AbstractPresenterModule {
+import javax.inject.Inject;
 
-    @Override
-    protected void configure() {
-        install(new HomeModule());
-        install(new ProfileModule());
+public class ProfileView extends ViewImpl implements ProfilePresenter.MyView {
+    interface Binder extends UiBinder<Widget, ProfileView> {
+    }
 
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+    @Inject
+    ProfileView(Binder uiBinder) {
+        initWidget(uiBinder.createAndBindUi(this));
     }
 }

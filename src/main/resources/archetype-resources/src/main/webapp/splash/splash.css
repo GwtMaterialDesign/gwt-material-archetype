@@ -1,20 +1,10 @@
-@font-face {
-    font-family: "Roboto";
-    src: local(Roboto Regular), url("font/Roboto-Regular.eot");
-    src: url("font/Roboto-Regular.eot?#iefix")
-    format("embedded-opentype"), url("font/Roboto-Regular.woff2")
-    format("woff2"), url("font/Roboto-Regular.woff")
-    format("woff"), url("font/Roboto-Regular.ttf")
-    format("truetype");
-    font-weight: 400
-}
 #splashscreen {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     position: fixed;
-    background: #2196f3 !important;
+    background: #fff !important;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -24,19 +14,16 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
+    color: #000;
     z-index: 9999;
+    font-display: swap;
+    font-family: monospace, monospace;
 }
 
 #splashscreen div {
     display: block;
     text-align: center;
     width: 100%;
-}
-
-#splashscreen img {
-    width: 150px;
 }
 
 #splashscreen .progress {
@@ -54,4 +41,3 @@
 #splashscreen span.descripton {
     font-weight: 200;
 }
-

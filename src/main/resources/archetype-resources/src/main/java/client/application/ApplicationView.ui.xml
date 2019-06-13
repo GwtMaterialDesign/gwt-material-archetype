@@ -35,22 +35,11 @@
         </m:MaterialHeader>
 
         <m:MaterialSideNavPush m:id="sidenav" width="280">
-            <m:MaterialLink text="Link 1" iconType="POLYMER"/>
-            <m:MaterialLink text="Link 2" iconType="POLYMER"/>
-            <m:MaterialLink text="Link 3" iconType="POLYMER"/>
+            <m:MaterialLink text="Home" iconType="HOME" href="#"/>
+            <m:MaterialLink text="Settings" iconType="SETTINGS" href="#profile"/>
         </m:MaterialSideNavPush>
 
-        <m:MaterialContainer ui:field="container">
-            <m:MaterialRow paddingTop="120">
-                <m:MaterialColumn grid="s12 m4 l4" offset="m4 l4">
-                    <m:MaterialPanel ui:field="onlinePanel" textAlign="CENTER">
-                        <m:MaterialIcon marginTop="120" textColor="BLUE_DARKEN_1" iconType="POLYMER" iconSize="LARGE"/>
-                        <m:MaterialLabel text="${projectName}" textColor="BLUE" fontSize="2em"/>
-                        <m:MaterialLabel text="${description}" textColor="BLUE" fontSize="0.8em"/>
-                    </m:MaterialPanel>
-                </m:MaterialColumn>
-            </m:MaterialRow>
-        </m:MaterialContainer>
+        <m:MaterialContainer ui:field="container" />
 
         <m:MaterialFAB>
             <m:MaterialButton ui:field="btnAdd" iconType="ADD" type="FLOATING" size="LARGE" backgroundColor="PINK"/>
