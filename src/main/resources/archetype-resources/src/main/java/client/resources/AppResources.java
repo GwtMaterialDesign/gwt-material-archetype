@@ -19,19 +19,18 @@
  */
 package ${package}.client.resources;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.TextResource;
 
 public interface AppResources extends ClientBundle {
-    interface Normalize extends CssResource {
-    }
 
-    interface Style extends CssResource {
-    }
+    AppResources INSTANCE = GWT.create(AppResources.class);
 
-    @Source("css/normalize.gss")
-    Normalize normalize();
+    @Source("css/app.css")
+    TextResource appCss();
 
-    @Source("css/style.gss")
-    Style style();
+    @Source("css/app-dark.css")
+    TextResource appDarkCss();
 }

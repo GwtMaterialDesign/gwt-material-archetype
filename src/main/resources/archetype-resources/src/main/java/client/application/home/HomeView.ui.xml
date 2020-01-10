@@ -25,7 +25,7 @@
             <m:MaterialPanel style="margin: auto">
                 <m:MaterialImage url="https://gwtmaterialdesign.github.io/gmd-core-demo/launcher-icons/launcher1x.png" alt="logo"/>
                 <m:MaterialLabel text="Welcome to gwt-material World" fontSize="2em"/>
-                <m:MaterialLabel text="Version 2.3-SNAPSHOT" />
+                <m:MaterialLabel text="Version 2.3.0" />
             </m:MaterialPanel>
         </m:MaterialPanel>
     </m:MaterialPanel>
