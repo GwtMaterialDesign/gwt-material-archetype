@@ -1,7 +1,7 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.2
+# Current Version - 2.3.0
 ### Includes
 - Updated GWT Version to 2.8.2
 - Updated GWTP Version to 1.5.3
@@ -27,7 +27,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.2 \
+          -DarchetypeVersion=2.3.0 \
           -DgroupId=your.company.domain \
           -Dpackage=your.company.domain.myapp \
           -DartifactId=your-project \
