@@ -2,7 +2,7 @@
  * #%L
  * GwtMaterial
  * %%
- * Copyright (C) 2015 - 2017 GwtMaterialDesign
+ * Copyright (C) 2015 - 2020 GwtMaterialDesign
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
  * limitations under the License.
  * #L%
  */
-package ${package}.client.resources;
+package ${package}.client.application;
 
-import javax.inject.Inject;
+import ${package}.client.resources.AppResources;
+import gwt.material.design.client.theme.dark.DarkThemeLoader;
 
-public class ResourceLoader {
-    @Inject
-    ResourceLoader(AppResources appResources) {
-        appResources.normalize().ensureInjected();
-        appResources.style().ensureInjected();
+public class AppDarkThemeLoader extends DarkThemeLoader {
+
+    public AppDarkThemeLoader() {
+        super(AppResources.INSTANCE.appDarkCss());
     }
 }

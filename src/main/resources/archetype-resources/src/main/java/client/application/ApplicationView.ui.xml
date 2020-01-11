@@ -18,16 +18,15 @@
   #L%
   -->
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-        xmlns:g='urn:import:com.google.gwt.user.client.ui'
-        xmlns:m="urn:import:gwt.material.design.client.ui">
-
-    <ui:with field="res" type="${package}.client.resources.AppResources"/>
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:m="urn:import:gwt.material.design.client.ui">
 
     <m:MaterialPanel>
         <m:MaterialHeader>
             <m:MaterialNavBar ui:field="navBar" activates="sidenav" backgroundColor="INDIGO">
-                <m:MaterialNavBrand fontSize="1.2em" text="${projectName}" />
-                <m:MaterialNavSection float="RIGHT">
+                <m:MaterialNavBrand fontSize="1.2em" text="GmdTest" />
+                <m:MaterialNavSection float="RIGHT" hideOn="NONE">
+                    <m:MaterialDarkModeToggle/>
                     <m:MaterialLink text="Link 1"/>
                     <m:MaterialLink iconType="POLYMER" />
                 </m:MaterialNavSection>
@@ -35,8 +34,8 @@
         </m:MaterialHeader>
 
         <m:MaterialSideNavPush m:id="sidenav" width="280">
-            <m:MaterialLink text="Home" iconType="HOME" href="#"/>
-            <m:MaterialLink text="Settings" iconType="SETTINGS" href="#profile"/>
+            <m:MaterialLink text="Home" href="#"/>
+            <m:MaterialLink text="Settings" href="#profile"/>
         </m:MaterialSideNavPush>
 
         <m:MaterialContainer ui:field="container" />
