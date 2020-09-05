@@ -17,21 +17,21 @@ Archetype for a web application that uses GWT Material Design
 
 3. Create a new project by running the following command in a folder of your choice:
 
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
-          -DarchetypeArtifactId=gwt-material-archetype \
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign
+          -DarchetypeArtifactId=gwt-material-archetype
           -DarchetypeVersion=2.4.0
 
 4. Follow the prompts. That's it!
 
 5. Optionally you could specify all the parameters in the command line instead of following the prompts:
 
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
-          -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.4.0 \
-          -DgroupId=your.company.domain \
-          -Dpackage=your.company.domain.myapp \
-          -DartifactId=your-project \
-          -DprojectName=YourProjectName \
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign
+          -DarchetypeArtifactId=gwt-material-archetype
+          -DarchetypeVersion=2.4.0
+          -DgroupId=your.company.domain
+          -Dpackage=your.company.domain.myapp
+          -DartifactId=your-project
+          -DprojectName=YourProjectName
           -DmoduleName=myapp
           
 6. You can also generate a project from Snapshot using the code below:
