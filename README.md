@@ -1,11 +1,11 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.4.0
+# Current Version - 2.4.1
 ### Includes
 - Updated GWT Version to 2.9.0
 - Updated JQuery Version to 3.5.1
-- Updated GMD Version to  2.4.0
+- Updated GMD Version to  2.4.1
 
 # Usage:
 1. Download the archetype
@@ -16,20 +16,19 @@ Archetype for a web application that uses GWT Material Design
         mvn clean install archetype:update-local-catalog
 
 3. Create a new project by running the following command in a folder of your choice:
-
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.4.0
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.4.1
 
 4. Follow the prompts. That's it!
 
 5. Optionally you could specify all the parameters in the command line instead of following the prompts:
 
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign
-          -DarchetypeArtifactId=gwt-material-archetype
-          -DarchetypeVersion=2.4.0
-          -DgroupId=your.company.domain
-          -Dpackage=your.company.domain.myapp
-          -DartifactId=your-project
-          -DprojectName=YourProjectName
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
+          -DarchetypeArtifactId=gwt-material-archetype \
+          -DarchetypeVersion=2.4.1 \
+          -DgroupId=your.company.domain \
+          -Dpackage=your.company.domain.myapp \
+          -DartifactId=your-project \
+          -DprojectName=YourProjectName \
           -DmoduleName=myapp
           
 6. You can also generate a project from Snapshot using the code below:
