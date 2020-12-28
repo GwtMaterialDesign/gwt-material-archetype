@@ -1,11 +1,11 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.4.1
+# Current Version - 2.4.2
 ### Includes
 - Updated GWT Version to 2.9.0
 - Updated JQuery Version to 3.5.1
-- Updated GMD Version to  2.4.1
+- Updated GMD Version to  2.4.2
 
 # Usage:
 1. Download the archetype
@@ -16,7 +16,8 @@ Archetype for a web application that uses GWT Material Design
         mvn clean install archetype:update-local-catalog
 
 3. Create a new project by running the following command in a folder of your choice:
-        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.4.1
+        mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign -DarchetypeArtifactId=gwt-material-archetype -DarchetypeVersion=2.4.2
+
 
 4. Follow the prompts. That's it!
 
@@ -24,7 +25,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.4.1 \
+          -DarchetypeVersion=2.4.2 \
           -DgroupId=your.company.domain \
           -Dpackage=your.company.domain.myapp \
           -DartifactId=your-project \

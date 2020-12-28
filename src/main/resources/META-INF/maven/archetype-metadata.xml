@@ -40,7 +40,7 @@
             <defaultValue>${groupId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="gwt-material-version">
-            <defaultValue>2.4.1</defaultValue>
+            <defaultValue>2.4.2</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
