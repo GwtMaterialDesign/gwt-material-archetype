@@ -1,11 +1,11 @@
 # gwt-material-archetype
 Archetype for a web application that uses GWT Material Design
 
-# Current Version - 2.3.2
+# Current Version - 2.5.0
 ### Includes
 - Updated GWT Version to 2.8.2
 - Updated GWTP Version to 1.5.3
-- Updated GMD Version to  2.3.2
+- Updated GMD Version to  2.5.0
 
 # Usage:
 1. Download the archetype
@@ -19,7 +19,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.3.2
+          -DarchetypeVersion=2.5.0
 
 4. Follow the prompts. That's it!
 
@@ -27,7 +27,7 @@ Archetype for a web application that uses GWT Material Design
 
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign \
           -DarchetypeArtifactId=gwt-material-archetype \
-          -DarchetypeVersion=2.3.2
+          -DarchetypeVersion=2.5.0
           -DgroupId=your.company.domain \
           -Dpackage=your.company.domain.myapp \
           -DartifactId=your-project \
@@ -39,7 +39,7 @@ Archetype for a web application that uses GWT Material Design
         mvn archetype:generate -DarchetypeGroupId=com.github.gwtmaterialdesign 
          -DarchetypeArtifactId=gwt-material-archetype 
          -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-         -DarchetypeVersion=2.3.2-SNAPSHOT
+         -DarchetypeVersion=2.6.0-SNAPSHOT
      
 # Test/Run
 
